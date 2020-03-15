@@ -6,22 +6,27 @@ from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as uReq
 from urllib.request import Request
 
-#url we are using for our webscrape
-my_url = 'https://daphnecaruanagalizia.com/?p=97967'
-#defining headers to combat previous 403 forbidden error
-req = Request(my_url, headers={'User-Agent': 'Mozilla/5.0'})
-myclient = uReq(req)
-mypage = myclient.read()
-myclient.close()
-#parsing received html using beautiful soup
-pagesoup = soup(mypage,"html.parser")
-#finding text area in blog post
-blogtext = pagesoup.find("div",{"class":"entry"})
-#ommiting any html text which could contaminate final AI language processing model
-actualtext = blogtext.get_text()
-#print out web scrapped text.
-actualtext
+blogposts = " "
 
-#result we are looking for.
+for x in range(6,40):
 
-#'\n  \nFormer Opposition leader Simon Busuttil testified in court this morning, as did the Prime Minister’s chief of staff, that crook Keith Schembri, in the case he himself brought against Dr Busuttil for libel damages. \nMr Schembri is claiming that he is not corrupt, despite moving to set up a secret company in Panama along with favourite minister Konrad Mizzi and Mr Egrant just days after Labour won the general election in 2013, sheltering it in a top-secret trust in New Zealand, then hunting round the world for a shady bank that would take them as clients.\n(In the end they solved the problem by setting up a shady bank in Malta, hiding in plain sight.)\nHis government salary is just peanuts to him, Mr Schembri said, because he has retained his companies and his shares and that is where he makes his money. But the way he is using his government influence to benefit his private business in Malta is entirely a separate corruption/trading in influence issue and is not an argument in his defence.\nHe also said that he was unable to reply to the corruption accusations in the past two years – but it hasn’t been two years – because of a “medical condition”. Would this be the medical condition that they claimed he didn’t have, when the Prime Minister’s chief of staff disappeared for months, I wondered why, found out, and then reported on it?\nThere are crooks everywhere you look now. The situation is desperate.\n\n  \n'
+    #url we are using for our webscrape
+    my_url = "https://daphnecaruanagalizia.com/?p=" + str(x)
+    print(x, "we good")
+    #defining headers to combat previous 403 forbidden error
+    req = Request(my_url, headers={'User-Agent': 'Mozilla/5.0'})
+    myclient = uReq(req)
+    mypage = myclient.read()
+    myclient.close()
+    #parsing received html using beautiful soup
+    pagesoup = soup(mypage,"html.parser")
+    #finding text area in blog post
+    blogtext = pagesoup.find("div",{"class":"entry"})
+    #ommiting any html text which could contaminate final AI language processing model
+    actualtext = blogtext.get_text()
+    #print out web scrapped text.
+    blogposts=blogposts+actualtext
+
+    #result we are looking for.
+
+    #'\n  \nFormer Opposition leader Simon Busuttil testified in court this morning, as did the Prime Minister’s chief of staff, that crook Keith Schembri, in the case he himself brought against Dr Busuttil for libel damages. \nMr Schembri is claiming that he is not corrupt, despite moving to set up a secret company in Panama along with favourite minister Konrad Mizzi and Mr Egrant just days after Labour won the general election in 2013, sheltering it in a top-secret trust in New Zealand, then hunting round the world for a shady bank that would take them as clients.\n(In the end they solved the problem by setting up a shady bank in Malta, hiding in plain sight.)\nHis government salary is just peanuts to him, Mr Schembri said, because he has retained his companies and his shares and that is where he makes his money. But the way he is using his government influence to benefit his private business in Malta is entirely a separate corruption/trading in influence issue and is not an argument in his defence.\nHe also said that he was unable to reply to the corruption accusations in the past two years – but it hasn’t been two years – because of a “medical condition”. Would this be the medical condition that they claimed he didn’t have, when the Prime Minister’s chief of staff disappeared for months, I wondered why, found out, and then reported on it?\nThere are crooks everywhere you look now. The situation is desperate.\n\n  \n'
