@@ -1,0 +1,3 @@
+
+  paragraph = find('p')
+  print(paragraph.text)

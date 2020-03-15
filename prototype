@@ -1,0 +1,1338 @@
+Question: How will I extract text data from DCG's blogs without having to do it manually for my raw text dataset which
+is to be fed into my final AI model?
+
+In coming up with an answer I did some research and found our about web scraping, and below web scrap a page of the Running
+Commentary blog by running a python script and specifically requesting the text content of the page. Although this is efficient
+and better than manually copying and pasting every paragraph in the page, it does not really scale up to what i need. I need something
+which will be able to scrape data from also linked pages, this is because in the blog if you specify the url parameters you are able to go
+to pages which contain lists of that months blog, doing in months would be far more easier than doing every individual blog
+
+https://realpython.com/beautiful-soup-web-scraper-python/
+
+>>> import requests
+>>> from bs4 import BeautifulSoup
+>>> url = 'https://daphnecaruanagalizia.com/2011/02/so-what-is-il-partit-ta-joseph-actually-doing/'
+>>> page = requests.get(url)
+>>> thesoup = BeautifulSoup(page.content,'html.parser')
+>>> print(thesoup.text)
+
+
+So what is Il-Partit ta' Joseph actually doing? - Daphne Caruana Galizia's Notebook | Running Commentary | Daphne Caruana Galizia
+
+
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/daphnecaruanagalizia.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.13"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+
+
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+
+
+
+
+
+
+
+/* <![CDATA[ */
+var WEF = {"local":"","version":"v2.4","fb_id":"470872746414039"};
+/* ]]> */
+
+
+
+
+
+
+
+
+
+	.g { margin:0px; padding:0px; overflow:hidden; line-height:1; zoom:1; }
+	.g-dyn { display:none; }
+	.g-col { position:relative; float:left; }
+	.g-col:first-child { margin-left: 0; }
+	.g-col:last-child { margin-right: 0; }
+	.g-1 { margin:1px 1px 1px 1px; }
+	.g-2 { margin:1px 1px 1px 1px; }
+	.g-3 { margin:1px 1px 1px 1px; }
+	.g-4 { margin:1px 1px 1px 1px; }
+	.g-5 { margin:1px 1px 1px 1px; }
+	.g-6 { margin:1px 1px 1px 1px; }
+	.g-7 { margin:1px 1px 1px 1px; }
+	.g-8 { margin:1px 1px 1px 1px; }
+	.g-9 { margin:1px 1px 1px 1px; }
+	@media only screen and (max-width: 480px) {
+		.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }
+	}
+
+
+AudioPlayer.setup("https://daphnecaruanagalizia.com/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.6", {width:"290",animation:"yes",encode:"yes",initialvolume:"60",remaining:"no",noinfo:"no",buffer:"5",checkpolicy:"no",rtl:"no",bg:"E5E5E5",text:"333333",leftbg:"CCCCCC",lefticon:"333333",volslider:"666666",voltrack:"FFFFFF",rightbg:"B4B4B4",rightbghover:"999999",righticon:"333333",righticonhover:"FFFFFF",track:"FFFFFF",loader:"009900",border:"CCCCCC",tracker:"DDDDDD",skip:"666666",pagebg:"FFFFFF",transparentpagebg:"yes"});
+
+var switchTo5x=true;
+
+stLight.options({"publisher":"d594fd30-3ca5-4b39-9b8d-e5571957eeed"});var st_type="wordpress4.6.1";
+
+
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52549723-1', 'auto');
+  ga('send', 'pageview');
+
+
+
+    var minDate;
+    (function ($) {
+        $(document).ready(function(){
+            $(".datepicker.from").datepicker({
+                changeMonth: true,
+                showOn: 'focus',
+                dateFormat: 'dd-mm-yy'
+            });
+
+            $(".datepicker.to").datepicker({
+                changeMonth: true,
+                showOn: 'focus',
+                minDate: minDate,
+                dateFormat: 'dd-mm-yy'
+            });
+
+            $(".datepicker.from").on('change', function () {
+                var selecteddate = $(".datepicker.from").datepicker('getDate');
+
+                $(".datepicker.to").datepicker("option", "minDate", selecteddate);
+            });
+
+            $("#btnSearchButton").click(function(){
+                if($("#mainsearch").val() == "")
+                    $("#mainsearch").val(" ");
+            });
+
+			if(!Modernizr.input.placeholder){
+				$('[placeholder]').focus(function() {
+				  var input = $(this);
+				  if (input.val() == input.attr('placeholder')) {
+					input.val('');
+					input.removeClass('placeholder');
+				  }
+				}).blur(function() {
+				  var input = $(this);
+				  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+					input.addClass('placeholder');
+					input.val(input.attr('placeholder'));
+				  }
+				}).blur();
+				$('[placeholder]').parents('form').submit(function() {
+				  $(this).find('[placeholder]').each(function() {
+					var input = $(this);
+					if (input.val() == input.attr('placeholder')) {
+					  input.val('');
+					}
+				  })
+				});
+			}
+
+        });
+
+    }(jQuery));
+
+
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '470872746414039',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Featured Posts
+
+
+
+
+
+
+So what is Il-Partit ta' Joseph actually doing?
+
+
+
+« back to home
+
+
+
+Published:
+February 28, 2011 at 7:10pm
+
+
+
+
+
+Click on image to enlarge it.
+You know, I’m already a little tired of hearing how the government and the opposition are collaborating in this crisis.
+How exactly is the opposition collaborating – by having Joseph Muscat answer the phone when Lawrence Gonzi rings to keep him informed?
+That just goes to show the high regard in which we, even those who vote for it, hold the Labour Party.
+For once, it doesn’t sprawl itself across the manger and shriek and bark, and we call it ‘collaboration’.
+Collaboration implies you’re actually doing something, but the evacuation programme isn’t being run out of Mile End, and I didn’t see Anglu Farrugia handing out food packs at the wharf the last time I looked.
+Joseph Muscat even took the opportunity of cancelling his Sunday morning meeting to spend the day at home, telling us that it was because of the crisis. What crisis? Did the bathroom boiler blow up? Did the roast lunch burn to a frazzle?
+Not only is the Labour Party not collaborating (it is just not putting spokes in the wheels, which is entirely different), but it is gearing up for a major bitch-fest about neutrality as it becomes increasingly obvious that there is going to have to be some kind of military intervention.
+The fact that Muscat found it necessary to specify that Il-Partit ta’ Joseph has no objections to the military being deployed here for humanitarian exercises tells us what we need to know.
+It was also telling that the prime minister felt compelled to remark in his press conference yesterday that “after all, humanitarian matters overrule all other considerations”.
+It makes me wonder whether there was pressure by il-Partit ta’ Joseph to refuse facilities to the RAF transport and SBS personnel in executing the rescue missions.
+Because let’s face it, imagine the scenario at Brontosaurus Central when the prime minister let Muscat know that this was going to happen. International secretary AST, shadow foreign minister Allahares Nidhlu Fl-Ewropa George Vella and the assorted fossils and dinosaurs would have had a lot to say, squawking about neutrality and the Constitution for which they had scant respect otherwise, while Il-Guy howled about business interests (and he knows a lot about that).
+You know how Labour reasons when it comes to neutrality: l-ewwel in-newtralita, imbaghad il-hajja tan-nies, kif ghamlu tajjeb fil-hijack tal-ajruplan ta’ Egyptair. I bet some of you sat there and watched that live as I did, saying to yourselves: “Well, at least we are respecting our Constitution.”
+I’ve always wondered, anyway, how with all those international secretary regime experts and mammoth legal brains they have arrived at the conclusion that neutrality means sitting around and watching while others do your job for you, no matter which countries are involved.
+The neutrality clause was written into the Constitution of Malta during the Cold War. It is Cold War relevant. Take it out of the Cold War context and it is utterly redundant and meaningless, as indeed it has been since 1989.
+That neutrality clause is there only at Muammar Gaddafi’s behest in any case. He hated and feared the Soviets as much as he did the Americans, and he was damned if he was going to have either in our harbour or on our airstrip getting ready to launch an attack on Tripoli.
+So it is entirely right and fitting that we should set its misinterpretation aside for the express purpose of doing him in. And while we’re at it, perhaps we should strap Reno Calleja to the rocket.
+
+
+
+
+
+« previous post
+next post »
+
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+
+79 Comments Comment
+
+
+
+
+
+El Topo says:
+
+February 28, 2011 at 7:41 pm
+Kollha hergin tal-Jurassic Park.
+Reply
+
+
+
+
+
+Hot Mama says:
+
+February 28, 2011 at 9:37 pm
+This dinosaur was named after Missis Prim Minstru Wannabe
+http://www.telegraph.co.uk/science/science-news/8352694/Dinosaur-discovery-thunder-thighs-dinosaur-found-in-museum-basement.html
+Reply
+
+
+
+
+
+
+
+A. Charles says:
+
+February 28, 2011 at 7:52 pm
+http://www.jpost.com/MiddleEast/Article.aspx?id=210038&utm_source=Pulseem&utm_medium=Email&utm_cam
+Reply
+
+
+
+
+
+La Redoute says:
+
+February 28, 2011 at 7:58 pm
+We don’t hold the Labour Party in high regard.
+We hold it to lower standards.
+Reply
+
+
+
+
+
+Joe Abela says:
+
+March 1, 2011 at 8:14 am
+You cannot stoop lower than what The Nationalist Party has stooped since being elected.
+Reply
+
+
+
+
+
+Karmenu ta' Gaddafi says:
+
+March 2, 2011 at 2:03 am
+Oh yes you can: the Golden Years. There are tens of thousands of traumatised survivors to give testimony to that.
+
+
+
+
+
+
+
+
+
+Albert Farrugia says:
+
+February 28, 2011 at 8:14 pm
+May I humbly ask what on earth is all this fuss about? The government, as it is anyway obliged to do, is making Malta International Airport available to a number of rescue flights, and opening Grand Harbour for ships doing the same. Big deal!
+Hearing the prime minister talk gives one the impression that all hinges around him, that all the world powers are looking at Malta in considering their next step!
+As if Dr Gonzi will sail into Tripoli himself, single-handedly ending the Libyan people’s suffering. WE even saw on the State Television H.E. Dear Leader the Prime Minister talking on Skype! My oh my! I AM impressed!
+So preposterous, so Banana Republic-like, so “Malta fior del mondo mentality”! I am surprised all this is coming from those who pretend to be the “liberals” of the island! I just wonder how people get so impressed by such trivial matters as offering a runway on which a plane can land!
+And yet, we are ignoring the REAL Maltese heroes in this, and that is the Air Malta officials, pilots and workers, who kept on flying to Libya in spite of the situation. How would the government have brought over the Maltese in Libya without having its own airline? By chartering Ryanair?
+[Daphne – You know, Albert, it’s when the brighter supporters of the Labour Party speak like this that I begin to understand why Labour always makes such a hash of everything. They think there’s nothing to it, and because it looks easy then it must be. Your description here is just how your Partit ta’ Joseph looks at the business of governing.]
+Reply
+
+
+
+
+
+Jack says:
+
+February 28, 2011 at 9:54 pm
+I’m not sure if we saw the same television interview, but what I saw tonight was a PM seeking to provide an objective and calm assessment of the situation rather than giving “..the impression that all hinges around him, that all the world powers are looking at Malta in considering their next step!”, as you put it.
+And, for all it’s worth, even the British government appreciated the efforts being done… http://www.fco.gov.uk/en/news/latest-news/?view=PressS&id=558172182 (8 paragraphs down)
+Reply
+
+
+
+
+
+Albert Farrugia says:
+
+February 28, 2011 at 9:55 pm
+Whatever. The thing is that people who use their heads can see through the big attempts being made to boost the prime minister’s standing.
+[Daphne – No, Albert, people who use their heads can see what is required in a major evacuation exercise like this. They can also see what is involved in a situation – as described by the prime minister tonight – where you have an Air Malta plane full of people on the runway in Tripoli and the Libyan prime minister on the line demanding that you return Libya’s fighter jets.]
+To gain political capital out of what is happening. Fair game. That is what politicians do. But that will not stop those who think with their own heads to call a spade a spade: that the prime minister’s entourage are trying their best to gain political mileage out of this.
+[Daphne – People who think with their own heads mainly vote Nationalist already, Albert. If you’re worried about the rest, just say so.]
+In other countries, heads of government usually compensate their blunders at home by resorting to foreign policy. This is normally not available to Maltese prime ministers. But now, a golden opportunity arose! Listen to Dr Gonzi tonight talking international politics!
+[Daphne – Albert, I think you haven’t noticed yet that it’s concentrated everybody’s mind and given us a sense of perspective which was so badly lacking in our gripes about utility bills and divorce. It’s also given the country a sense of purpose which seems to have triggered our collective memory. But as a committed Labour supporter you will fail to understand that – away from the debates about neutrality and mietna ghal barrani – Malta and the Maltese are happiest and at their best when there’s something like this going on, particularly if it involves plenty of important movements in Grand Harbour and military planes. It’s what we are, and the Labour Party misjudged the situation magnificently. The evacuation operation worked so smoothly because Malta was developed essentially as a military base, and all the structures for that sort of thing are in place, as is the ‘mentality’.]
+I could actually admire the government’s efforts in all this. I think they are doing a good job. So why make a partisan political issue out of this?
+[Daphne – Oh, then why not just say so, Albert, instead of first posting a comment dissing everything and saying what’s so special about it. The fact remains the people currently in government are competent at this sort of thing and rise to the occasion brilliantly, but when you look at the other lot, I’m sorry – totally unconvincing, and it’s not like we haven’t had experience of those dinosaurs, either.]
+Reply
+
+
+
+
+
+Bajd u Laham says:
+
+March 1, 2011 at 2:38 pm
+That the prime minister is trying his utmost to earn political credit out of the whole issue is clear and it’s ultimately a no biggie as every politician does it.
+But I can’t not point out how evident it was that Louis Bondi – with all those easy peasy questions of his – made sure Gonzi scored as many cookies as possible during yesterday’s Hardtalk, errr Bondi+.
+[Daphne – I believe it’s Lewis, not Louis, but stand to be corrected. They were not easy peasy questions at all. The standard method of interviewing is non-aggressive, with polite questions designed to elicit revealing answers: http://www.bbc.co.uk/news/world-africa-12603086 Unfortunately, lots of people who support Labour think that poor manners are acceptable in certain circumstances, if not in all.]
+
+
+
+
+
+egatt says:
+
+March 1, 2011 at 3:16 pm
+Really, Albert – everything hinges around the Prime Minister?
+I can clearly recall a hijack situation where everything was being managed by the then Prime Minister and his cabinet. Who needed negotiation experts when we had KMB, Joe Grima, Lorry Sant and bella compania, all of them huddled at the airport control tower?
+ And history will tell you what brilliant results they achieved.
+
+
+
+
+
+
+
+Rover says:
+
+February 28, 2011 at 10:56 pm
+Really. So the Prime Minister gave you the impression that all hinges around him. That’s rich coming from a Labour fan.
+People my age distinctly remember that twat Mintoff and the insufferable KMB screaming on our TV screens “Ahna lill-Amerikani nghidulhom…” or “Ahna lil-Ewropa ta’ Kajjin nghidulhom….” when most of these folks couldn’t give a monkey’s what the little muppets were bleating about.
+That was the time when we were ashamed of our representatives who , even to this day, are nothing but Gaddafi lackeys.
+Reply
+
+
+
+
+
+il-Ginger says:
+
+February 28, 2011 at 11:37 pm
+Things are not that simple Albert, but I’m glad that you’re getting used to things working smoothly in this country.
+Reply
+
+
+
+
+
+
+
+Neil Dent says:
+
+February 28, 2011 at 8:20 pm
+I’ve heard and read comments from the PL camp, several times over the last couple of days, that the PM has been continuously ‘consulting’ the Labour leader about Malta’s actions during the Libyan crisis.
+Consulting indeed. Well well! Arani Ma!
+Cameron may well ‘consult’ Nick Clegg, but why would Malta’s PM ‘consult’ the leader of the opposition on something like this?
+I really hope that word has been used due to poor grasp of the English language, and not as some skewed attempt at gaining credibility among the great unwashed, or petty one-upmanship. Of course, I suspect the latter.
+It’s not ‘consulting’. It’s informing, advising, updating, filling in, keeping up to speed etc, etc.
+Reply
+
+
+
+
+
+TROY says:
+
+February 28, 2011 at 8:31 pm
+As long as Joseph is made to look important the PL are happy.
+Reply
+
+
+
+
+
+Rita Camilleri says:
+
+March 1, 2011 at 8:56 am
+@TROY – dak biex in-nanna tghid “Kemm hu bravu Joseph taghna – Gonzi qed jikkonsultah.”
+Reply
+
+
+
+
+
+
+
+drewsome says:
+
+February 28, 2011 at 8:34 pm
+Constitution?
+Waittaminute…..oh yeah…the same document reduced to a wad of toilet paper by Dom-the-Blood Brother’s famous statement “jien nitnejjek mill-kostituzzjoni”.
+Give us all a break and get with it.
+The blundering around witnessed so far is a pathetic collage of boneheaded rants (cheers, Reno), mediation offers (for Chrisssake KMB liiiiivvvees) and the sTreSSSS on “humanitarian”.
+Well. guys, wake up and smell the coffee. No fly zones seem imminent. With all the implications. Oh dear, what to agree to support? Active military co-operation? Logistic help only? Evacuees?
+Dumbest case scenario: yaay, let’s dig out that hallowed neutrality clause in Malta’s constitution and wave it around in nostalgic outrage.
+In 2011.
+While Libya burns.
+Reply
+
+
+
+
+
+il-Ginger says:
+
+March 1, 2011 at 12:45 am
+In any case isn’t the neutrality clause outdated and therefore invalid?
+Chapter 1
+3
+“Non-alignment”? As in what Pro-US or Pro-USSR?
+3(e)
+“in accordance with the principles of non-alignment
+the said shipyards will be denied to the military
+vessels of the >>two superpowers<<."
+http://www.legal-malta.com/law/constitution-1.htm
+Reply
+
+
+
+
+
+
+
+C Falzon says:
+
+February 28, 2011 at 8:35 pm
+At last it looks like a no-fly zone is being seriously considered.
+http://www.timesofmalta.com/articles/view/20110228/local/global-call-for-libya-no-fly-zone
+It would do much more than just prevent him from shooting at people from the aircraft – it would cut his supply and communications lines rendering him quite harmless in a short time. He is totally dependant on aircraft to survive.
+On another note I think you do not give Joseph Muscat enough credit. He must be making a huge effort to keep his mouth shut and seems to be successful in that, even if some of the others around him have been less so.
+Let’s hope he can maintain that silence when Malta is asked to support military action that seems to be imminent.
+Reply
+
+
+
+
+
+La Redoute says:
+
+February 28, 2011 at 11:01 pm
+What did I say earlier?
+We don’t hold the Labour Party in high regard.
+We hold it to low standards.
+Reply
+
+
+
+
+
+
+
+K Farrugia says:
+
+February 28, 2011 at 8:41 pm
+You should ask Joe Grima, who always begins his weekly programme on One TV with an eulogy to the Labour government’s golden years. This evening he praised Mintoff vis a vis his relations to Gaddafi.
+Reply
+
+
+
+
+
+TROY says:
+
+February 28, 2011 at 9:17 pm
+Joe Grima is a worn out fossil from the Jurassic period.
+Reply
+
+
+
+
+
+Karmenu ta' Gaddafi says:
+
+March 2, 2011 at 2:04 am
+He’s got rather a lot of meat on his bones for a fossil.
+
+
+
+
+
+
+
+
+
+rigu says:
+
+February 28, 2011 at 8:43 pm
+Super One this evening mentioned the thanks that the Chinese Ambassador and British PM David Cameron passed on to Malta – they cut one short and did not play the sound on the other but spoke over it.
+In either case they thanked PM Lawrence Gonzi and the Maltese people.
+THAT is what the PL is all about GHIRA sfrenata – yes, let us just imagine Joseph consulting with Anglu, Toni, AST and George on whether to allow the Hercules to land.
+He will be EU President in a few short years – all the good work that comes naturally to Lawrence Gonzie will be undone by Joseph and his motley crew.
+Reply
+
+
+
+
+
+Scopio says:
+
+February 28, 2011 at 8:46 pm
+Simply brilliant …
+Reply
+
+
+
+
+
+Riya says:
+
+February 28, 2011 at 9:21 pm
+Issa hareg bravu iehor tal-Golden Years, Reno Calleja, li prova jirredikola lil-Prim Ministru, imma shabu, jekk tista’ issejhilhom hekk, idissassoccjaw irwiehom minn dan l-ex ministru ta’ zmien Mintoff u l-Golden Years.
+Qed jahseb li Gaddafi se jibqa fil-poter ghax terrorist bhal ma kien jahseb hu u shabu fil-Golden Years li bil-vjolenza tista zzomm il-poter.
+Reno Calleja ahjar ikun onest, u jghidilna kemm hemm deputati tal-Golden Years li ircevew rigali min ghand Gaddafi, bhal ma ircieva Mintoff.
+Reply
+
+
+
+
+
+kev says:
+
+February 28, 2011 at 9:24 pm
+Everyone agrees that Malta should act as a humanitarian hub. It’s now time to start talking about the possibility of its turning into a military base.
+If Gaddafi holds on and a no-fly embargo is imposed on Libyan territory someone would have to shoot down military aircraft infringing the embargo, particularly if civilian targets are bombed (reality is irrelevant here, it’s what the Western governments/media choose to say that will count).
+From which military base/s will the Western forces take off in this case? Malta is no longer a military base, but in no time it can be converted to serve its historical role.
+This is extremely dangerous for at the very least it sets a modern precedent. It is not a matter of Gaddafi surviving and coming back at us, as much as re-establishing Malta as a military base, this time on the border of an aspiring centralised superstate. That’s the old EU-frontier argument.
+Now, we don’t know how this turmoil will end. This revolutionary wave may democratise the region in the same way the ‘colour revolutions’ did in Eastern Europe, or it may yield something else.
+What if, eventually, an anti-Western alliance shapes up across the Arab/Muslim world? You might think the West would not allow this to happen – but don’t bet your last cent on this, especially since you never know which global elements control which key aspects in the evolving circumstances (the Western media will be in unison come what may).
+In other words, when enemies are required, enemies are created or allowed to take form. It’s been like that throughout history and there is absolutely no reason to believe things have changed positively in this respect. the proof? Pax Americana has unleashed more wars than all of history’s wars combined (not to mention the fire power).
+So we need to be cautious and wise, not gung-ho issa nuruk! We need to anticipate every possible scenario and be prepared. We need to make it clear that Malta will NOT act as BOTH a humanitarian and a military base. It’s either one or the other.
+(Now there’s a problem with this too, because most of those fleeing Libya are ending up in Tunisia and Egypt, while Malta was mainly used to evacuate Europeans and other expats – that’s nearly done. But if Tunisia and Egypt re-erupt – the revolutions there are not over yet – then of course Malta’s humanitarian role would be ensured. But this is a detail.)
+I hope the prime minister knows what he’s doing, but let me remind everyone that we still have a constitution and – in case you find ‘neutrality’ distasteful – the Constitution of Malta still stipulates that:
+ “(a) no foreign military base will be permitted on Maltese territory;
+“(b) no military facilities in Malta will be allowed to be used by any foreign forces except at the request of the Government of Malta, and only in the following cases:…”
+http://www.legal-malta.com/law/constitution-1.htm
+This is what our constitution stipulates, irrespective of how it got there, or who and why. More over, although the Lisbon Treaty holds primacy over national constitutions, security and defence issues are still in a sort of EU half-way house and our ‘neutrality clause’ is supposedly guaranteed.
+Reply
+
+
+
+
+
+kev says:
+
+February 28, 2011 at 9:32 pm
+The quoted articles are 3a & b.
+Reply
+
+
+
+
+
+H.P. Baxxter says:
+
+February 28, 2011 at 10:00 pm
+But that would be taking the lawyer’s approach. We have other articles in our constitution, which we more or less ignore (such as English being an official language – ever heard it being used in officialdom?). The neutrality clause is wrong, circumstances are exceptional, so I say let’s go with the flow, Joe.
+However, I’m not here to discuss hopeless issues, but to brief the audience. The enforcement of a no-fly zone requires:1
+1) A legel framework
+2) The military means
+The legal framework could be a UN Security Council resolution, or a NATO Council decision (highly unlikely, and politically suicidal).
+The military assets to be deplyoed are of two types:
+1) airspace control systems and
+2) interceptors
+Now 1) requires a permanent, 24/7 presence, either of an airborne control system, or of an air defence frigate, whose coverage would only extend some distance inland. Given that Libya’s urban zones are mostly on the coast, this wouldn’t be too much of a problem.
+The planes in 2) need airborne refuelling assets. (ah, logistics, damned logistics!).
+So, what now? A carrier battlegroup off Libya? Bases in Sicily? Sicily is at 60 minutes’ flight time from Libya. Getting there wastes fuel. Malta, however…..*
+The better option, for all concerned, would be the enforcement of a no-fly zone by neighbouring Tunisia and Egypt. But they’d still need NATO backup in some crucial areas.
+*Fascinating to see that the ancient geostrategic considerations of the Normans when they wanted to conquer Ifriqiyya are every bit as valid today as they were in the 12th century. Now it’s the operational range of fighters. Back then it was the operational range of galleys (about 150km).
+
+
+
+
+
+C Falzon says:
+
+February 28, 2011 at 10:44 pm
+Baxxter –
+The range of the fighters is not really an issue. In a no fly patrol the planes would spend more time circling than arriving on station and to do that they must necessarily refuel in the air.
+Whether they operate from an aircraft carrier off Libya or else Egypt and Tunisia, the distances are about the same so the in air refuelling would be needed anyway.
+Typically a modern jet fighter can operate missions about 700Km from its base, that is 700km there, some time for the actual mission and 700km return.
+For a no-fly zone patrol they would typically spend an hour getting there, a number of hours patrolling and an other hour to return to base. They would refuel several times.
+The only advantage of operating from land is that other nations would be able to participate rather than just the nations that operate large carriers, and there aren’t that many of those.
+
+
+
+
+
+kev says:
+
+February 28, 2011 at 11:00 pm
+Talk of “a lawyer’s approach” Baxxter!
+It’s a geo-political approach backed by a Constitution – which you describe as ‘hopeless issues’.
+
+
+
+
+
+kev says:
+
+March 1, 2011 at 12:51 pm
+It gets better now. Apparently Russia and China are not backing a no-fly zone in the Security Council so a NATO intervention is also on the books.
+We are not NATO members. Sigonella and aircraft carriers would suffice. Roping Malta in a military intervention would only be a political move, not a strategic one. As I said earlier: it creates a dangerous precedent and it breaches our constitution.
+
+
+
+
+
+H.P. Baxxter says:
+
+March 1, 2011 at 4:27 pm
+I mean that changing the constitution was “hopeless”.
+But really, with some of you I’m not sure if you agree with the neutrality clause, or if you disagree but still think it should be respected to the letter because it’s the law.
+I’ve said time and again that I disagree with the clause. That part of the constitution should be blank. And we should participate in military coalitions as we see fit. After all, we already have: Georgia and, anti-piracy missions in the Indian Ocean. (OK there were those lorries carrying baby food driven into Bosnia, but that doesn’t count).
+On the question of the no-fly zone, I don’t expect Malta to be used as a base. We have neither the infrastructure nor the experience. But if Sicily is used, we’ll have to get used to having armed aircraft flying through our airspace. No phone calls to Gaddafi this time, I hope.
+
+
+
+
+
+kev says:
+
+March 1, 2011 at 5:54 pm
+I disagree with many laws but I understand that the rule of law must be respected, especially the constitution. Tough, Baxxter, you need 2/3 of the House to agree with you. Live with it.
+Having said that, one thing I’m certainly not is a legalistic pedant. I am for anything that promotes peace and understanding. I especially detest war as a racket – and war IS a racket, as General Smedley Butler once famously said.
+He who fights by the sword, dies by the sword. The policies we implement today will define our future. Mintoff’s peace-promoting mission was a good cause, but it had to be nurtured, something Fenech Adami failed to do since all he could figure out were the gates of Babel, especially when Francis Fukuyama told him ‘history had ended’.
+The ousting of Gaddafi does not have to make us sacrifice what’s left of our anti-military clause. There’s Sicily, there are aircraft carriers and there is the British base in Cyprus for that. Malta’s role is in the humanitarian field. We cannot do both.
+
+
+
+
+
+
+
+kev says:
+
+February 28, 2011 at 9:57 pm
+“That neutrality clause is there only at Muammar Gaddafi’s behest in any case.”
+Daphne, why do you keep repeating this fallacy? This is not a time to be flippant – and this come from the most flippant visitor of your bottegin… there!
+Also, the neutrality clause is not just “Cold War relevant”. If you try hard you might realise that it is aimed at keeping Malta free from foreign military presence for reasons I’m not sure you are fully aware of.
+Also, excuse the hyperbole over Pax Americana – but it HAS unleashed more wars than any empire in history.
+Finally, my advice to all: check the constitutional provisos (link above). It is all clear enough and that’s the supreme law of the land.
+[Daphne – Please think hard, Kevin, and then come back to the bottegin to explain to me and others why it is so very, very important that there are no military bases in Malta when Sicily 60 miles away has no similar difficulties.]
+Reply
+
+
+
+
+
+kev says:
+
+February 28, 2011 at 10:53 pm
+Malta is a very tiny island. Sicily is the size of Belgium. That is one reason.
+The Sicilians did not have the clout to rid themselves of the menace of military bases. Independent Malta, on the other hand, had no mainland Big Brother imposing a NATO base on its soil.
+Tell me, are you edging for an attack on Gaddafi’s forces from Malta? Can’t you see that every nation has a role to play but being bombed into oblivion does not have to be ours, thank you very much?
+
+
+
+
+
+La Redoute says:
+
+February 28, 2011 at 11:06 pm
+All I can squeeze out from that panegyric is this:
+a neutrality clause won’t be much defence if Gaddafi bombed the hell out of us just because he felt like it.
+
+
+
+
+
+red nose says:
+
+March 1, 2011 at 10:04 am
+There is Sigonella Air Base. Malta, militarily, has become obsolete.
+[Daphne – Sigonella Air Base belongs to the US.]
+
+
+
+
+
+La Redoute says:
+
+March 1, 2011 at 1:20 pm
+Kev,
+Sicily may be the size of Belgium, but how is that relevant? Surely you don’t mean that because Italy’s ‘big’ (size is relative, but anyway) it doesn’t matter what happens to part of it?
+
+
+
+
+
+
+
+Stefan Vella says:
+
+February 28, 2011 at 10:24 pm
+A state can only claim to be neutral if it can enforce its neutrality by overwhelming military force – if it can do so, then there is no valid reason for said state to be neutral.
+Nazi Germany illustrated this concept in WWII at the expense of the neutral Dutch and Belgians.
+Faced with any scenario you can come up with, I will always choose an EU/Nato aligned position for Malta even as the most southern military base. Better to face the bogeyman with an organised military defence than by waving the Maltese constitution to some wannabe Guderian acolyte.
+Short version – the constitution needs to be updated to reflect the current reality. Neutrality became obsolete when the first V1 took to the air. Labour as usual missed the history lesson.
+Reply
+
+
+
+
+
+H.P. Baxxter says:
+
+February 28, 2011 at 10:44 pm
+Spot on.
+Let me just say that no one is suggesting we should join NATO. That’s financially impossible. But whenever possible, we should jump at the chance to do our bit. You can’t hang at the bar all your life. Some day you’re going to have to hit the dancefloor.
+Besides, you cannot expect to have some other country plucking your citizens from danger or retaking your ships from Somali pirates if you never lift a finger to help.
+
+
+
+
+
+
+
+Mini Mint says:
+
+February 28, 2011 at 10:56 pm
+Jien, f’isem il-Maltin, nigi nitnejjek min din il-parti tal-konstituzjoni. And I’m quoting Mintoff.
+Reply
+
+
+
+
+
+Mark Vella says:
+
+February 28, 2011 at 11:01 pm
+Who do you call when Malta needs military help – other neutral countries like Austria and Ireland? It might surprise you but neutral countries only feel safe in the knowledge that some other military-armed state will do the dirty work when things go wrong.
+There can be no such thing as peace or democracy unless we have the instruments to defend them, be it through the law courts, freedom of press or the military.
+And let’s stop this cheap anti-American propaganda and for once, try to give them some credit. With their warts and all, if it wasn’t for them, we would probably be either exterminated, Communists or Nazis. Besides, your history facts seem to be a bit warped as well – Europe tops the list when it comes to conflicts and war atrocities at any point in recorded history.
+Reply
+
+
+
+
+
+kev says:
+
+March 1, 2011 at 1:24 am
+Having forgotten all about Bondiplus I am watching it right now on di-ve.com.
+Although Lou Bondi seems to have understood that Gonzi implied a military role for Malta, he did no such thing; not specifically. In any case, it was a short-question-short-answer affair and the show moved on from what looked like a hot potato.
+‘Being neutral does not mean being neutralised,’ Gonzi said. Indeed, and Malta’s role is in the humanitarian field. It is a small island-state where all amenities are close at hand and where logistics can be better coordinated.
+So the prime minister is leaving all options open; hopefully not ostensibly. That’s the sensible thing to do at this stage, anyway… for it IS a hot potato.
+As for “l-aRJuplani”?! Please…
+Reply
+
+
+
+
+
+
+
+Hot Mama says:
+
+February 28, 2011 at 9:35 pm
+Il-Partit ta’ Joseph is busy saving its a$$. Libya is one PR disaster for them. So Joseph tries to seem (like Jilly Cooper would say….yes, yes, I am a fan) ‘caring’ by riding the PM’s coattails.
+Reply
+
+
+
+
+
+ciccio2011 says:
+
+February 28, 2011 at 10:02 pm
+Apparently, the Labour Party has realised that, in the current state of affairs with Libya, the only thing that is really Golden is Silence.
+Reply
+
+
+
+
+
+ciccio2011 says:
+
+February 28, 2011 at 10:04 pm
+Oh, on One, Joe Grima is asking WHETHER Gaddafi should leave: “Gaddafi ghandu jitlaq?”
+It costs 58 cents, VAT included, to give Joe a resounding Yes.
+Is he seriously expecting any No replies?
+Reply
+
+
+
+
+
+La Redoute says:
+
+February 28, 2011 at 11:07 pm
+He’s an avid reader of timesofmalta.com comments so, yes, he’s probably expected some ‘No’ replies.
+Reply
+
+
+
+
+
+Pepe` says:
+
+February 28, 2011 at 11:41 pm
+If Reno Calleja knew how to send text messages, he’d get one NO at least.
+Reply
+
+
+
+
+
+
+
+C Falzon says:
+
+February 28, 2011 at 10:06 pm
+Although the use of Malta by the military would be of little more than symbolic value it will be aindeed be a pity if the constitution were to prevent us from helping the Libyans.
+It will put us one more time in the history books for the wrong reason. Not only will we be remembered as having saved Gaddafi’s life but also of refusing to help the international community in ending his brutal regime.
+In any case the US navy can probably do a very good job of keeping Gaddafi’s aircraft on the ground without our help. If they feel it is worth the trouble they could quite easily have the Enterprise outside Libya within four days or less.
+There’s not really much that you can do from our airport that you can’t from the deck of the Enterprise, except of course allowing aircraft of other nationalities to participate.
+Also, failing that, it would not really make much difference whether the planes are based in Malta or Sicily. It would just add twenty minutes or so to the flight time.
+Reply
+
+
+
+
+
+Grezz says:
+
+February 28, 2011 at 10:08 pm
+Monday, 28th February 2011 – 21:26CET
+Gonzi: ‘We will not be idle if faced by genocide’ — Request for jet fighters return made by Libyan PM
+The Libyan Prime Minister personally asked Malta to return two Mirage jet fighters flown to Malta by defecting pilots.
+Malta will not remain idle if faced by a genocide in Libya, Prime Minister Lawrence Gonzi said this evening.
+Asked if Malta was prepared to play a part if a genocide took place in Libya, Dr Gonzi said on Bondi Plus that Malta would not be idle in the face of genocide.
+“We respect human dignity and fundamental human rights. We hold neutrality dear, but that does not mean being neutralised, especially if there are circumstances such as a genocide,” Dr Gonzi said.
+http://www.timesofmalta.com/articles/view/20110228/local/libya-we-will-not-be-idle-if-faced-by-genocide-gonzi-request-for-jet-fighters-was-made-by-libyan-pm
+Reply
+
+
+
+
+
+A.Attard says:
+
+February 28, 2011 at 10:23 pm
+Looks like the cavalry might be charging again from the island of the knights. Neutrality is dead. This is where we belong.
+Reply
+
+
+
+
+
+H.P. Baxxter says:
+
+February 28, 2011 at 10:32 pm
+Er, on what? Sea-horses?
+
+
+
+
+
+Reuben Scicluna says:
+
+March 1, 2011 at 5:34 am
+A.Attard:
+Looks like the cavalry might be charging again from the island of the knights. Neutrality is dead. This is where we belong.
+H.P. Baxxter
+Er, on what? Sea-horses?
+Now why did you have to trample on that too? It was a poetic image. There we go charging across the desert, flying pennants silhouetted against a setting sun, thunderous battle cries filling the heart of the infidel with dread …
+Of course we know we can’t just go there and do something, but it was nice while it lasted, don’t you think?
+
+
+
+
+
+A. Attard says:
+
+March 1, 2011 at 8:00 am
+I never said the Maltese cavalry.
+
+
+
+
+
+H.P. Baxxter says:
+
+March 1, 2011 at 4:31 pm
+Because I’m wary of “crusader” imagery. God knows I have to fight hard against it even among historians.
+
+
+
+
+
+
+
+
+
+rigu says:
+
+February 28, 2011 at 10:25 pm
+David Cameron thanked Malta “not the first time”…..The PN got it right “not the first time either”.
+Reply
+
+
+
+
+
+liberal says:
+
+February 28, 2011 at 11:35 pm
+Just read the comments posted here by the Maltese http://www.timesofmalta.com/articles/view/20110228/local/cameron-thanks-malta-for-libya-assistance …………… unbelievable.
+[Daphne – I think Manuel Micallef’s is the worst. What a prat. All that posing around trying to be taken seriously as the more personable face of the GWU and Labour, and he thinks like a frigging peasant, which is probably what he is anyway.
+Manuel Micallef: “I am delighted that Cameron and the Chinese told us “thank you”! Unfortunately though, I have not yet heard that all these foreign powers are leaving anything behind them in terms of money or anything else. ….and by the way, petrol and diesel now have gone up considerably! That is the result which we got from this crises (assuming the raise is linked to the crises – for which I have my doubts!”) ]
+Reply
+
+
+
+
+
+Ray says:
+
+March 1, 2011 at 4:36 pm
+Why cannot he understand that Malta is not a whore?
+
+
+
+
+
+
+
+Philip says:
+
+March 1, 2011 at 12:05 am
+But dawk il-bravi tas-Super One decided to play it down. They did not even have the guts to play the sound clip when Cameron was thanking Malta for ”once again” rising to the occasion and playing such a vital role in this difficult situation.
+One could hear ”hear hear” coming from both sides of the house.
+And those Super-idiots cannot tell the difference between aggornat and konsultat. As you say Daphne, briefed NOT consulted.
+Reply
+
+
+
+
+
+.Angus Black says:
+
+March 1, 2011 at 1:32 pm
+‘…briefed and not consulted…’
+Not only, but DECISIONS are taken by Dr. Gonzi NOT Joseph Muscat.
+Briefing him is mere courtesy which, the new Labour still has to understand.
+
+
+
+
+
+
+
+
+
+Grezz says:
+
+February 28, 2011 at 10:55 pm
+I have taken the liberty of posting this link
+http://daphnecaruanagalizia.com/2011/02/28/grtu-kickstarts-maltas-humanitarian-aid-effort/#comment-208539 because others might miss it, given the massive volume of “Libya” information on the internet.
+Reply
+
+
+
+
+
+Jelly Bean says:
+
+February 28, 2011 at 11:13 pm
+I say, let the international community use Malta as a military and humanitarian base as much as they want. As long as we get rid of Gaddafi.
+Joseph Muscat wouldn’t have to worry about his touristic masterplan (having so much to deal with at the moment, miskin).
+And who knows, we might also see Strait Street spring to life.
+Reply
+
+
+
+
+
+Anthony says:
+
+February 28, 2011 at 11:14 pm
+I have read some of the comments.
+Strangely, some people still believe Malta is the centre of the universe.
+If the US decide to impose a no-fly zone, or annihilate the Colonel for that matter, they can do it from Sigonella. F*** Malta.
+They have enough firepower there to decimate half the entire African continent in a matter of a few hours without even bothering to pick up the phone to inform Gonzi, Cameron or Sarkozy. Let alone Joey.
+You must be joking.
+Reply
+
+
+
+
+
+ciccio2011 says:
+
+February 28, 2011 at 11:18 pm
+“So what is il-Partit ta’ Joseph actually doing?”
+Hopefully not preparing for the celebration of the 42nd anniversary.
+Reply
+
+
+
+
+
+.Angus Black says:
+
+March 1, 2011 at 1:35 pm
+They are busy checking their bank accounts and cutting expenses now that no further dinars will be forthcoming from brother Gaddafi.
+Reply
+
+
+
+
+
+ciccio2011 says:
+
+March 1, 2011 at 4:02 pm
+Maybe they will soon resurrect that request for the state financing of the political parties, then.
+
+
+
+
+
+
+
+
+
+carmel says:
+
+March 1, 2011 at 12:25 am
+Do you know what are you saying please, you don’t know what neutrality means, do you?
+Reply
+
+
+
+
+
+J Abela says:
+
+March 1, 2011 at 12:39 am
+Dante once wrote: ‘The hottest place in hell is reserved for those who in time of crisis remain neutral’
+Couldn’t agree with him more.
+Reply
+
+
+
+
+
+Village says:
+
+March 1, 2011 at 7:43 am
+It is a good thing that Joseph Muscat is supporting the Prime Minister. The government is showing mature, capable and courageous qualities in the way it is handling this difficult scenario. Good leadership qualities are clearly evident.
+But all such qualities are not always evident in any potential prime minister.
+I ask the contributors to this blog – how do you think Joseph Muscat would have handled the challenge had he been prime minister instead of Lawrence Gonzi?
+Reply
+
+
+
+
+
+.Angus Black says:
+
+March 1, 2011 at 1:41 pm
+Kieku Joseph kien prim ministru?
+Kien jaghqad bhal skrun. Ara kemm kien ‘jikkonsulta’ ma Karmenu, Karmenu, Fredu w AST, qabel ma jiehu xi decizjoni dghajfa.
+Dnub li Dumink mhux f’pozizjoni li jaghti xi parir.
+Reply
+
+
+
+
+
+
+
+Edward Clemmer says:
+
+March 1, 2011 at 7:54 am
+“And while we’re at it, perhaps we should strap Reno Calleja to the rocket.”
+There is not enough room for the entire PL “Brontosaurus Central.” But here is the proper image for “Imhobbkom” Joseph and his flight crew: http://www.en.wikipedia.org/wiki/File:Slim-pickens_riding-the-bomb_enh-lores.jpg
+Reply
+
+
+
+
+
+Farrugia says:
+
+March 1, 2011 at 9:14 am
+It seems that the PL wants to take a high moral stand by advocating peace and neutrality. That is fine but not when there is a vicious regime (ie Gadaffi) involved.This same regime would not recogise Malta’s right on its continental shelf. In such circumstances the PL’s attitude is treacherous.
+The inevitable will happen and the allies (USA, UK, France and Italy) will make a pig’s breakfast of Libya’s oil.
+But what will Malta get out of this? Will we get a reassurance that all our maritime border is respected by Libya and other powers? Or will we join in this fight and have our economy shattered and in compensation get a simple ‘thank you’ from the British government?
+We really do not need a second George Cross but we do need our oil and gas within our continental shelf.
+Reply
+
+
+
+
+
+red nose says:
+
+March 1, 2011 at 10:09 am
+RAI TV reported yesterday that a US aircraft carrier was on its way to Libyan waters. Is KMB awake? Does he still have a telephone and Gaddafi’s number?
+Reply
+
+
+
+
+
+Edward Caruana Galizia says:
+
+March 1, 2011 at 11:31 am
+What is going on in the heads of those PL diehards who go on about the golden years? They must be trying very hard to fit that idea into the reality we find ourselves today.
+Let’s see: Mintoff and Karmenu were best buddies with this guy. They wanted Malta to be like Libya, and so did their supporters. DM and KMB still believe the way to go is the Libyan way, and KMB thinks the Colonel should not stand down. These are the men who governed during those golden years.
+The people in the PL are supporters of the two, don’t stop singing their praises, and some even worked along side them on their quest to turn Malta into Libya.
+But now that dream has been shown to be the nightmare it really is/was. And now some are even acting like they are against Gaddafi.
+So which is it? Pro our past with him but anti Gaddafi today? Nothing much has changed within the Gaddafi regime since then. It was the horror it is today. Or is this another case of hindsight?
+Reply
+
+
+
+
+
+milosovic says:
+
+March 1, 2011 at 1:11 pm
+kev
+Thabbilx rasek, ma ghandhomx bzonn lil Malta biex juzaw il-bazi militari. Hemm sigonella, u barra minn hekk resqet vicin l-aircraft carrier Enterprise, u l-Inglizi ser juzaw Cipru.
+Jigifieri illi ma ghandekx ghalfejn toqghod tizra biza fil-Maltin ghax ma ghadniex fiz-zmien iehor, allavolja ghad fadal ftit nies injuranti li li jibilghu kollox.
+Sahansitra wahda qalet li ser imutu bil-guh ghax issa ma ghandniex il-Gaddafi itina il-flus.
+Reply
+
+
+
+
+
+Bajd u Laham says:
+
+March 1, 2011 at 3:18 pm
+“The standard method of interviewing is non-aggressive, with polite questions designed to elicit revealing answers”
+Daphne, the problem is that, more often than not, he loses his cool quite easily and the tenor of his questions is quite different when it comes to interviewing subjects pertaining to the other side of his political spectrum.
+I’ll avoid using the word ‘bigot’ and try to be more politically correct by saying that consistency is surely not a virtue he cultivates.
+[Daphne – Would those other interviewees also be the prime minister? No. Prime ministers have special status as interviewees, with a degree of politeness reserved for the fact that they represent the government. You will notice how polite those interviewers were even to Gaddafi in his last stand. Bondi handles the leader of the opposition the same way and for the same reason. With politicians who do not have a constitutional role, one can be more familiar in one’s approach. It is, however, unwise to adopt a harassment approach to questioning a prime minister or president or even opposition leader: it comes across as gauche. I have no doubt that the way Joseph Muscat, then a Super One reporter, shouted at Eddie Fenech Adami in one of the last political broadcasts before the EU referendum (or subsequent general election) contributed in no small part to the failure of his party at the polls.]
+Reply
+
+
+
+
+
+George Mifsud says:
+
+March 1, 2011 at 5:13 pm
+…the way Joseph Muscat, then a Super One reporter, shouted at Eddie Fenech Adami
+Ms.Caruana Galizia, do NOT bet your life or bottom dollar on that. Joey probably got elected leader BECAUSE of that. It is the way this sort of people think. The more they scream and hurl insults, the more they are adulated.
+[Daphne – Doubtless, but he galvanised the rest to vote against Labour.]
+Reply
+
+
+
+
+
+
+
+.Angus Black says:
+
+March 1, 2011 at 10:20 pm
+Daphne, you should have added that an interviewer asking Joseph a question and receiving no answer or, ‘elect me first and then you’ll see’, or Karmenu qed jikteb il-programm elettorali, will by necessity irritate the most normally calm and composed interviewer.
+Reply
+
+
+
+
+
+Leave a Comment Click here to cancel reply
+
+
+
+Name (required)
+
+Mail (will not be published) (required)
+
+Website
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+	jQuery(document).ready(function(){
+	  if(jQuery(".sidebar-box ul").has("li").length == 0) {
+		jQuery(".sidebar-box").addClass("no-show");
+	 }
+	});
+
+
+Featured Posts
+
+
+Paltry €50,000 fine for illegal Siggiewi zoo lifted in exchange for state school visits...more
+
+
+Owner of illegal Siggiewi zoo parties with Environment Minister one day before Planning Authority sanctions it...more
+
+
+World Economic Forum index/Malta: public trust in politicians plummets 17 places in one year...more
+
+
+When freeloading Clyde Puli spent 16 days at the Olympic Games in China and made us pay for it...more
+
+
+The leader of the Nationalist Party and Miss Rebecca Dimech...more
+
+
+Well, the Kap tal-Kattolici u l-Latini certainly has a roving eye...more
+
+
+
+
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+
+
+
+        jQuery(document).ready(function(){
+            var articleId = 10021;
+
+            readArticle(articleId);
+
+            //setTimeout(function(){
+            //    jQuery(".socialbtns").fadeIn();
+            //}, 1300);
+        });
+
+
+
+
+
+
+
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":0,"isRTL":false});});
+
+
+
+
+
+
+
+
+var tracker_url = 'https://daphnecaruanagalizia.com/wp-content/plugins/adrotate-pro/library/clicktracker.php';
+
+
+
+st_go({blog:'3030541',v:'ext',post:'10021'});
+var load_cmc = function(){linktracker_init(3030541,10021,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
