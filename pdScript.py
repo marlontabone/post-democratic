@@ -9,7 +9,7 @@ from urllib.request import Request
 
 blogposts = " "
 
-for x in range(0,97967):
+for x in range(34611,97967):
 
     #url we are using for our webscrape
     my_url = "https://daphnecaruanagalizia.com/?p=" + str(x)
