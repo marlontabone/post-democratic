@@ -9,7 +9,7 @@ from urllib.request import Request
 
 blogposts = " "
 
-for x in range(34611,97967):
+for x in range(93661,97967):
 
     #url we are using for our webscrape
     my_url = "https://daphnecaruanagalizia.com/?p=" + str(x)
@@ -21,14 +21,18 @@ for x in range(34611,97967):
         print("skipping this one")
         print(e)
         sys.exit(1)
-    page = soup((r.content),"html.parser")
-    blogtext = page.find("div",{"class":"entry"})
 
-    if blogtext is not None:
-        actualtext = blogtext.get_text()
-        #print out web scrapped text.
-        blogposts=blogposts+actualtext
-        file  = open('check.txt','a')
-        file.write(blogposts)
-        file.close()
-        print(x)
+    page = soup((r.content),"html.parser")
+
+    text = page.find("div", {"class":"entry"})
+
+    if text is not None:
+        children = text.findChildren("p",{"class":None}, recursive=False)
+        if children is not None:
+            for child in children:
+                actual = child.get_text()
+                #print(actual)
+                file  = open('1.txt','a')
+                file.write(actual)
+                file.close()
+                print(x)
