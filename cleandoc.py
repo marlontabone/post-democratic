@@ -1,6 +1,7 @@
 from nltk.tokenize import word_tokenize
 import string
 
+#function to remove all punctuation from dataset text
 def clean_doc(text):
 
      clean_words= []
